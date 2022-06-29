@@ -45,10 +45,12 @@ class LivreController extends Controller
      * @param  \App\Models\Livre  $livre
      * @return \Illuminate\Http\Response
      */
-    public function show(Livre $livre)
-    {
-        //
-    }
+    public function show($livre_name) {
+        $livre = \App\Models\Livre::where('livre_name',$livre_name)->first(); //get first recipe with recipe_nam == $recipe_name
+        return view('livres/single',array( //Pass the recipe to the view
+            'livre' => $livre
+        ));
+     }
 
     /**
      * Show the form for editing the specified resource.
