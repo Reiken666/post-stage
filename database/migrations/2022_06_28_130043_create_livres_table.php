@@ -13,11 +13,22 @@ class CreateLivresTable extends Migration
      */
     public function up()
     {
-        Schema::create('livres', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('Livres', function (Blueprint $table) {
+            $table->string('Titre');
+            $table->string('Auteurs');
+            $table->text('Résumé');
+            $table->integer('Prix');
+            $table->date('Date_parution');
+            $table->string('Genre');
+            $table->string("Edition");
+            $table->string('Langue');
+            $table->string('Image')
+                ->nullable=true;
+            $table->integer('ISBN');
+            $table->integer('Stock');
         });
     }
+
 
     /**
      * Reverse the migrations.

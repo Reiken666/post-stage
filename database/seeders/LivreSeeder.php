@@ -13,6 +13,6 @@ class LivreSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

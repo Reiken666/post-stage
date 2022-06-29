@@ -9,16 +9,11 @@ class Livre extends Model
 {
     use HasFactory;
 
-    /* Get the auteur of the livre.
+    public $timestamps = false;
 
-    */
-
-   public function auteur()
-
-   {
-
-       return $this->belongsTo(Auteur::class,'Nom');
-
-   }
+    public function auteurs()
+    {
+        return $this->belongsToMany(Author::class, 'livres_auteurs');
+    }
 }
 

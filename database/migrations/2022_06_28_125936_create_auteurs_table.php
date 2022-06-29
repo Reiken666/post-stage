@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Auteur extends Migration
+class CreateAuteursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class Auteur extends Migration
      */
     public function up()
     {
-        Schema::create('auteur', function (Blueprint $table) {
+        Schema::create('Auteurs', function (Blueprint $table) {
             $table->string('Nom');
             $table->string('Prénom');
             $table->text('Pays');
-            $table->integer('Date_décès');
+            $table->date('Date_décès')->nullable(true);
+            $table->id('auteurs_id');
+
+            
+
     });
 }
 

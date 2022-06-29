@@ -14,7 +14,10 @@ class AuteurFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'Nom' => $this->faker->name(),
+            'Prénom' => $this->faker->name(),
+            'Pays' => $this->faker->country(),
+            'Date_décès' => $this->faker->date(),
         ];
     }
 }

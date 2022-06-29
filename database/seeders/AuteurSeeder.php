@@ -13,6 +13,6 @@ class AuteurSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

@@ -13,6 +13,6 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

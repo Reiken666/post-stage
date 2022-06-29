@@ -9,18 +9,9 @@ class Auteur extends Model
 {
     use HasFactory;
 
-     /*
-    Get the auteur livres'
-    */
-    public function livre()
-    {
-        return $this->hasMany(Livre::class,'ISBN');
-    }
+    public $timestamps = false;
 
-
-    
 }
 
 
 
-  
