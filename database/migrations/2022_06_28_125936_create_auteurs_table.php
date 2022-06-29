@@ -14,13 +14,13 @@ class CreateAuteursTable extends Migration
     public function up()
     {
         Schema::create('Auteurs', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('Nom');
             $table->string('Prénom');
             $table->text('Pays');
             $table->date('Date_décès')->nullable(true);
-            $table->id('auteurs_id');
 
-            
+
 
     });
 }

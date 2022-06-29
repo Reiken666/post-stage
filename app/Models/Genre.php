@@ -9,6 +9,11 @@ class Genre extends Model
 {
     use HasFactory;
 
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class, 'genres',);
+    }
+
     public $timestamps = false;
 
 }

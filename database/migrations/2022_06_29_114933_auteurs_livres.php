@@ -14,20 +14,16 @@ class AuteursLivres extends Migration
     public function up()
     {
         Schema::create('auteurs_livres', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->unsignedBigInteger('auteurs_id');
-            $table->unsignedBigInteger('livres_id');
+            $table->unsignedBigInteger('auteur_id');
+            $table->unsignedBigInteger('livre_id');
 
-            $table->foreign('auteurs_id')
+            $table->foreign('auteur_id')
             ->references('id')
-            ->on('auteurs')
-            ->onDelete('cascade');
+            ->on('auteurs');
 
-            $table->foreign('livres_id')
+            $table->foreign('livre_id')
             ->references('id')
-            ->on('livres')
-            ->onDelete('cascade');
+            ->on('livres');
         });
     }
 

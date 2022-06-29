@@ -13,7 +13,12 @@ class Livre extends Model
 
     public function auteurs()
     {
-        return $this->belongsToMany(Author::class, 'livres_auteurs');
+        return $this->belongsToMany(Auteur::class, 'auteurs_livres',);
     }
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class, 'genres',);
+    }
+
 }
 
